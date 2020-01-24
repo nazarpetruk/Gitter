@@ -14,7 +14,7 @@ class RoundedButton: UIButton {
         super.awakeFromNib()
         backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         layer.cornerRadius = frame.height / 2
-        layer.borderWidth = 3
+        layer.borderWidth = 2
         layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
     }
