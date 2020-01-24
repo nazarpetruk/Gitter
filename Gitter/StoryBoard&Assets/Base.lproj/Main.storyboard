@@ -36,39 +36,39 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="701"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="441" id="AEH-KO-pL9">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="441"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trendingRepoCell" rowHeight="490" id="AEH-KO-pL9" customClass="TrendingRepoCell" customModule="Gitter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="490"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AEH-KO-pL9" id="5eM-kk-kkv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="441"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="490"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6a-Zo-AmZ">
-                                                    <rect key="frame" x="20" y="11" width="374" height="399"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="448"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="O5Y-Gq-JqN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="389"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="438"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ESc-3P-O4k">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="350"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="399"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-Ow-nmU">
-                                                                            <rect key="frame" x="106" y="0.0" width="162" height="42.5"/>
+                                                                            <rect key="frame" x="106" y="0.0" width="162" height="48.5"/>
                                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="35"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-3X-fSV">
-                                                                            <rect key="frame" x="139" y="42.5" width="96.5" height="18.5"/>
+                                                                            <rect key="frame" x="139" y="48.5" width="96.5" height="21"/>
                                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="15"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lGV-Cr-2Lh">
-                                                                            <rect key="frame" x="0.0" y="61" width="374" height="259"/>
+                                                                            <rect key="frame" x="0.0" y="69.5" width="374" height="299.5"/>
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tql-aA-yow" customClass="RoundedButton" customModule="Gitter" customModuleProvider="target">
-                                                                            <rect key="frame" x="147.5" y="320" width="79" height="30"/>
+                                                                            <rect key="frame" x="147.5" y="369" width="79" height="30"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="30" id="usY-kl-zNi"/>
@@ -86,7 +86,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-zZ-6Iq">
-                                                                    <rect key="frame" x="0.0" y="359" width="374" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="408" width="374" height="30"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XR-Qd-U9B">
                                                                             <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
@@ -180,6 +180,16 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="K6a-Zo-AmZ" secondAttribute="bottom" constant="20" id="ed3-R1-ImU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backGroundView" destination="K6a-Zo-AmZ" id="xMa-2s-gGa"/>
+                                            <outlet property="contributorsNmbrLbl" destination="zqb-pF-f2U" id="26v-Z6-3Wa"/>
+                                            <outlet property="languageLbl" destination="8hH-eA-mHN" id="vVd-Dz-n8P"/>
+                                            <outlet property="numberOfForksLbl" destination="FCm-fP-U15" id="ZgR-EX-uwD"/>
+                                            <outlet property="repoDescLbl" destination="TFc-3X-fSV" id="NIW-v0-OGk"/>
+                                            <outlet property="repoImgView" destination="lGV-Cr-2Lh" id="5r1-Ap-SgK"/>
+                                            <outlet property="repoNameLbl" destination="9qy-Ow-nmU" id="rdu-7s-63V"/>
+                                            <outlet property="toreadMeBtn" destination="Tql-aA-yow" id="gBw-Sm-Dd1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -211,6 +221,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bZT-z4-wbc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t8B-1E-FWS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
