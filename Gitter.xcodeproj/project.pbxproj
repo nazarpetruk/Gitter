@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37BC2022AA32209AE76516AF /* Pods_Gitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE5857EF8B063BF081CF62D /* Pods_Gitter.framework */; };
+		4466065123DB7E1400AE8EC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466065023DB7E1400AE8EC5 /* Constants.swift */; };
+		4466065323DB818100AE8EC5 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466065223DB818100AE8EC5 /* DownloadService.swift */; };
 		44C2403123DB015D00FF6605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C2403023DB015D00FF6605 /* AppDelegate.swift */; };
 		44C2403323DB015D00FF6605 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C2403223DB015D00FF6605 /* SceneDelegate.swift */; };
 		44C2403523DB015D00FF6605 /* TrandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C2403423DB015D00FF6605 /* TrandingVC.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		41FBE7C266AEB9812DAACA5E /* Pods-Gitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gitter/Pods-Gitter.debug.xcconfig"; sourceTree = "<group>"; };
+		4466065023DB7E1400AE8EC5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4466065223DB818100AE8EC5 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		44C2402D23DB015D00FF6605 /* Gitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C2403023DB015D00FF6605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44C2403223DB015D00FF6605 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4466064E23DB7D5A00AE8EC5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4466065223DB818100AE8EC5 /* DownloadService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4466064F23DB7DF200AE8EC5 /* Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				4466065023DB7E1400AE8EC5 /* Constants.swift */,
+			);
+			path = Utillities;
+			sourceTree = "<group>";
+		};
 		44C2402423DB015D00FF6605 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +93,8 @@
 		44C2402F23DB015D00FF6605 /* Gitter */ = {
 			isa = PBXGroup;
 			children = (
+				4466064F23DB7DF200AE8EC5 /* Utillities */,
+				4466064E23DB7D5A00AE8EC5 /* Services */,
 				44C2404923DB02CD00FF6605 /* LaunchScreen */,
 				44C2404823DB02AB00FF6605 /* StoryBoard&Assets */,
 				44C2404723DB028D00FF6605 /* App&Scene */,
@@ -278,9 +300,11 @@
 				44DACA9223DB5DAD00A78111 /* TrendingRepoCell.swift in Sources */,
 				44C2403523DB015D00FF6605 /* TrandingVC.swift in Sources */,
 				44DACA8E23DB305800A78111 /* FancyTextField.swift in Sources */,
+				4466065323DB818100AE8EC5 /* DownloadService.swift in Sources */,
 				44C2403123DB015D00FF6605 /* AppDelegate.swift in Sources */,
 				44DACA9023DB59E300A78111 /* RepositoryModel.swift in Sources */,
 				44C2403323DB015D00FF6605 /* SceneDelegate.swift in Sources */,
+				4466065123DB7E1400AE8EC5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

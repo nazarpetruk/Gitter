@@ -36,7 +36,7 @@ class TrendingRepoCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        backGroundView.layer.cornerRadius = 15
+        backGroundView.layer.cornerRadius = 20
         backGroundView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         backGroundView.layer.shadowOpacity = 0.25
         backGroundView.layer.shadowRadius = 5.0
