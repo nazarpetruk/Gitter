@@ -20,6 +20,9 @@ class TrandingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+        DownloadService.instance.dawnloadRepositories { (reposArray) in
+            print(reposArray[1].name)
+        }
     }
     
     //MARK: TableViewProtocol methods
