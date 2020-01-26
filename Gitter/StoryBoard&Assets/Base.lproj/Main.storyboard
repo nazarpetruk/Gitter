@@ -252,42 +252,65 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNV-gU-DvV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD0-dS-Lng">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD0-dS-Lng">
                                         <rect key="frame" x="149.5" y="58" width="115" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.098039215690000001" blue="0.098039215690000001" alpha="0.90303147009999996" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="fD0-dS-Lng" firstAttribute="centerY" secondItem="yNV-gU-DvV" secondAttribute="centerY" constant="20" id="Kq0-Wq-DHb"/>
                                     <constraint firstAttribute="height" constant="112" id="bEz-PV-zgQ"/>
+                                    <constraint firstItem="fD0-dS-Lng" firstAttribute="centerX" secondItem="yNV-gU-DvV" secondAttribute="centerX" id="sDW-qa-v6N"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter search query..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idB-Yw-zm9" customClass="FancyTextField" customModule="Gitter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="132" width="374" height="25"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter search query..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idB-Yw-zm9" customClass="FancyTextField" customModule="Gitter" customModuleProvider="target">
+                                <rect key="frame" x="20" y="132" width="374" height="34"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pJw-N8-STB">
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="u7z-pS-Iph">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u7z-pS-Iph" id="IYc-ai-ssl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="pJw-N8-STB" firstAttribute="bottom" secondItem="neo-dD-mTG" secondAttribute="bottom" id="058-e5-Sho"/>
                             <constraint firstItem="yNV-gU-DvV" firstAttribute="top" secondItem="te3-i5-wYl" secondAttribute="top" id="9gz-gl-GsC"/>
                             <constraint firstItem="neo-dD-mTG" firstAttribute="trailing" secondItem="idB-Yw-zm9" secondAttribute="trailing" constant="20" id="B2j-R9-6f0"/>
                             <constraint firstItem="yNV-gU-DvV" firstAttribute="trailing" secondItem="neo-dD-mTG" secondAttribute="trailing" id="J0s-Yg-8xF"/>
                             <constraint firstItem="idB-Yw-zm9" firstAttribute="top" secondItem="yNV-gU-DvV" secondAttribute="bottom" constant="20" id="KDB-8f-9eS"/>
+                            <constraint firstItem="pJw-N8-STB" firstAttribute="top" secondItem="idB-Yw-zm9" secondAttribute="bottom" constant="8" id="ScV-s8-qt4"/>
                             <constraint firstItem="idB-Yw-zm9" firstAttribute="leading" secondItem="neo-dD-mTG" secondAttribute="leading" constant="20" id="Z39-Eh-vhv"/>
+                            <constraint firstItem="pJw-N8-STB" firstAttribute="leading" secondItem="neo-dD-mTG" secondAttribute="leading" id="Zyu-QH-A0Z"/>
                             <constraint firstItem="yNV-gU-DvV" firstAttribute="leading" secondItem="neo-dD-mTG" secondAttribute="leading" id="kAl-57-16D"/>
+                            <constraint firstItem="pJw-N8-STB" firstAttribute="trailing" secondItem="neo-dD-mTG" secondAttribute="trailing" id="nw0-Eg-QY7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="neo-dD-mTG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="searchIconSmall" selectedImage="searchIconSmall" id="NCe-8m-ZdP"/>
+                    <connections>
+                        <outlet property="searchTableView" destination="pJw-N8-STB" id="hZ5-lN-XHM"/>
+                        <outlet property="searchTxtField" destination="idB-Yw-zm9" id="lJn-eR-tbq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6U-sk-2hI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.9275362318842" y="551.78571428571422"/>
+            <point key="canvasLocation" x="1044.9275362318842" y="551.11607142857144"/>
         </scene>
     </scenes>
     <resources>
