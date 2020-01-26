@@ -7,45 +7,38 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
-class TrandingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TrandingVC: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: Vars&Lets
+    let refreshcontrol = UIRefreshControl()
+    let disposeBag = DisposeBag()
+    var dataSource = PublishSubject<[Repository]>()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.reloadData()
-        DownloadService.instance.downloadTrendingRepos { (repos) in
-            print(repos[0].name)
-            print(repos[1].name)
-            print(repos[2].name)
-            print(repos[3].name)
-            print(repos[4].name)
-            print(repos[5].name)
-            print(repos[6].name)
+        tableView.refreshControl = refreshcontrol
+        refreshcontrol.tintColor = #colorLiteral(red: 0.4803189635, green: 0.04282506555, blue: 0.0762879774, alpha: 1)
+        refreshcontrol.attributedTitle = NSAttributedString(string: "Geting some sweet data 🔥", attributes: [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.4803189635, green: 0.04282506555, blue: 0.0762879774, alpha: 0.9030314701), NSAttributedStringKey.font : UIFont.init(name: "AmericanTypewriter-Bold", size: 16.0)!])
+        refreshcontrol.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        //MARK: TableView Managed
+        fetchData()
+        dataSource.bind(to: tableView.rx.items(cellIdentifier: "trendingRepoCell")) {(row, repository : Repository, cell : TrendingRepoCell) in
+            cell.configCell(repo: repository)
+        }.disposed(by: disposeBag)
+    }
+    
+    @objc func fetchData() {
+        DownloadService.instance.downloadTrendingRepositories { (trendingRepositoriesArray) in
+            self.dataSource.onNext(trendingRepositoriesArray)
+            self.refreshcontrol.endRefreshing()
         }
-    }
-    
-    //MARK: TableViewProtocol methods
-    
-    func  numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "trendingRepoCell", for: indexPath) as? TrendingRepoCell else { return UITableViewCell() }
-        let repository = Repository(image: UIImage(named: "searchIconLarge")!, name: "RxSwift", description: "Reactive programming library", forks: 2392, language: "Swift", contributors: 2386, repoUrl: "www.google.com")
-        cell.configCell(repo: repository)
-        return cell
     }
 }
 

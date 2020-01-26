@@ -46,7 +46,7 @@ class DownloadService {
         }
     }
     
-    func downloadTrendingRepos(completion: @escaping (_ reposArray: [Repository]) -> ()) {
+    func downloadTrendingRepositories(completion: @escaping (_ reposArray: [Repository]) -> ()) {
         var reposArray = [Repository]()
         downloadTrendingRepositoriesDictionaryArray { (trendingReposDictArray)
             in
