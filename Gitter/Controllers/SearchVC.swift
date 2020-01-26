@@ -26,7 +26,13 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindElements()
+        
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     
     func bindElements() {
         let searchResultObservable = searchTxtField.rx.text

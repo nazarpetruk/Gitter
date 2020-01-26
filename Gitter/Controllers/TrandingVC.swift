@@ -34,6 +34,11 @@ class TrandingVC: UIViewController {
         }.disposed(by: disposeBag)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    
     @objc func fetchData() {
         DownloadService.instance.downloadTrendingRepositories { (trendingRepositoriesArray) in
             self.dataSource.onNext(trendingRepositoriesArray)
