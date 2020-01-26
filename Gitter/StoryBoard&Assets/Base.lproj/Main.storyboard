@@ -382,7 +382,6 @@
                                             <outlet property="descriptionLbl" destination="WBC-5N-LWU" id="JgC-nH-H1u"/>
                                             <outlet property="forksNbrLbl" destination="bbm-dT-fnz" id="hk5-2K-36u"/>
                                             <outlet property="languageLbl" destination="n45-ka-DJg" id="Ixa-p5-1Vv"/>
-                                            <outlet property="repoImg" destination="vTc-A8-ir2" id="f6S-Dx-UJn"/>
                                             <outlet property="repositoryNameLbl" destination="DZr-ne-CDh" id="OzF-US-ftG"/>
                                         </connections>
                                     </tableViewCell>

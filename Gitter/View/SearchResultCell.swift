@@ -17,7 +17,6 @@ class SearchResultCell: UITableViewCell {
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var forksNbrLbl: UILabel!
     @IBOutlet weak var languageLbl: UILabel!
-    @IBOutlet weak var repoImg: UIImageView!
     @IBOutlet weak var backgroundVIEW: UIView!
     
     
