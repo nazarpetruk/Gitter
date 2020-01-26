@@ -21,6 +21,7 @@
 		44DACA8E23DB305800A78111 /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DACA8D23DB305800A78111 /* FancyTextField.swift */; };
 		44DACA9023DB59E300A78111 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DACA8F23DB59E200A78111 /* RepositoryModel.swift */; };
 		44DACA9223DB5DAD00A78111 /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DACA9123DB5DAD00A78111 /* TrendingRepoCell.swift */; };
+		44FA2A3923DDE40000860526 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA2A3823DDE40000860526 /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		44DACA8D23DB305800A78111 /* FancyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
 		44DACA8F23DB59E200A78111 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		44DACA9123DB5DAD00A78111 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
+		44FA2A3823DDE40000860526 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		57D734A0BD71F96CC187D778 /* Pods-Gitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gitter/Pods-Gitter.release.xcconfig"; sourceTree = "<group>"; };
 		ACE5857EF8B063BF081CF62D /* Pods_Gitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				44DACA8B23DB2EE900A78111 /* RoundedButton.swift */,
 				44DACA8D23DB305800A78111 /* FancyTextField.swift */,
 				44DACA9123DB5DAD00A78111 /* TrendingRepoCell.swift */,
+				44FA2A3823DDE40000860526 /* SearchResultCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				44C2403123DB015D00FF6605 /* AppDelegate.swift in Sources */,
 				44DACA9023DB59E300A78111 /* RepositoryModel.swift in Sources */,
 				44C2403323DB015D00FF6605 /* SceneDelegate.swift in Sources */,
+				44FA2A3923DDE40000860526 /* SearchResultCell.swift in Sources */,
 				4466065123DB7E1400AE8EC5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
