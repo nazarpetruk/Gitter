@@ -19,10 +19,10 @@ class Repository {
     public private(set) var repoUrl : String
     public private(set) var img : UIImage
     
-    init(name: String, image: UIImage, descript: String, forks: Int, language: String, contributors: Int, repoUrl: String) {
-        self.name = name
+    init(image: UIImage, name : String, description: String, forks: Int, language: String, contributors: Int, repoUrl: String) {
         self.img = image
-        self.description = descript
+        self.name = name
+        self.description = description
         self.forksNmbr = forks
         self.language = language
         self.contributorsNmbr = contributors
