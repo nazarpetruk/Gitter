@@ -21,7 +21,7 @@ class SearchResultCell: UITableViewCell {
     
     
     //MARK: Variables
-    private var repoUrl : String?
+    public private(set) var repoUrl : String?
     
     
     func configureCell(repository : Repository) {

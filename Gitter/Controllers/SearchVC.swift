@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 
-class SearchVC: UIViewController {
+class SearchVC: UIViewController, UITableViewDelegate, UITextFieldDelegate {
     
     
     //MARK: IBOutlets
@@ -26,6 +26,7 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindElements()
+        searchTableView.rx.setDelegate(self).disposed(by: disposeBag)
         
     }
     
@@ -71,5 +72,23 @@ class SearchVC: UIViewController {
             cell.configureCell(repository: repository)
         }
     .disposed(by: disposeBag)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? SearchResultCell else {return}
+        //cell.backgroundColor = #colorLiteral(red: 0.450481832, green: 0.3242934644, blue: 0.597058773, alpha: 0.9030314701)
+        let url = cell.repoUrl!
+        self.presentSafariVCFor(url: url)
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }
